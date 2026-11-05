@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Xhot.com – Watch Movies Online with English Subtitles</title>
+<meta name="description" content="Watch new movies, TV series and movies by genre in FHD quality with English subtitles.">
+<style>
+  :root {
+    --bg: #000;
+    --surface: #131316;
+    --line: #26262b;
+    --text: #fff;
+    --muted: #9a9aa5;
+    --accent: #ff4655;
+    --gold: #f5b73b;
+    --blue: #3b9cf5;
+    --radius: 10px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+  ul { list-style: none; }
+
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* ---------- Header ---------- */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .header-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .logo span { color: var(--accent); }
+
+  .main-nav { display: flex; align-items: center; gap: 4px; }
+
+  .nav-link {
+    padding: 8px 14px;
+    border-radius: 8px;
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    transition: color 0.2s, background 0.2s;
+  }
+  .nav-link:hover { color: var(--text); background: var(--surface); }
+  .nav-link.active { color: var(--text); background: var(--surface); box-shadow: inset 0 -2px 0 var(--accent); }
+
+  .dropdown { position: relative; }
+  .dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    min-width: 200px;
+    max-height: 60vh;
+    overflow-y: auto;
+    padding: 6px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+    display: none;
+    columns: 1;
+  }
+  .dropdown.open .dropdown-menu { display: block; }
+  .dropdown-menu button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .dropdown-menu button:hover,
+  .dropdown-menu button.active { background: #1f1f25; color: var(--text); }
+  .dropdown-empty { padding: 8px 12px; color: var(--muted); font-size: 0.9rem; }
+
+  .search-form { margin-left: auto; position: relative; flex: 0 1 340px; min-width: 200px; }
+  .search-form input {
+    width: 100%;
+    padding: 10px 16px 10px 40px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+    font-size: 0.95rem;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .search-form input::placeholder { color: var(--muted); }
+  .search-form input:focus { outline: none; border-color: var(--accent); background: #1a1a1f; }
+  .search-fo
